@@ -173,6 +173,7 @@ public class EditorActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<Note> call, Throwable t) {
                 progressDialog.dismiss();
+                Log.e("Localized", "" + t.getLocalizedMessage());
                 Toast.makeText(EditorActivity.this, "Localized = " + t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
             }
         });
