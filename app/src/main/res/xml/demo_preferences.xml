@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.doubleclick.apiretrofitmysql.spectrum.SpectrumPreferenceCompat
+        android:key="demo_preference_1"
+        android:summary="This is pretty cool."
+        android:title="Color preference"
+        app:spectrum_colors="@array/demo_colors"
+        app:spectrum_outlineWidth="2dp"/>
+
+    <com.doubleclick.apiretrofitmysql.spectrum.SpectrumPreferenceCompat
+        android:key="demo_preference_2"
+        android:summary="This preference won't close automatically when a color is selected; you have to press OK"
+        android:title="Another color preference"
+        app:spectrum_closeOnSelected="false"
+        app:spectrum_outlineWidth="2dp" />
+
+    <com.doubleclick.apiretrofitmysql.spectrum.SpectrumPreferenceCompat
+        android:key="demo_preference_3"
+        android:summary="This preference has a fixed number of columns (4)."
+        android:title="Fixed column count"
+        app:spectrum_closeOnSelected="false"
+        app:spectrum_columnCount="4"
+        app:spectrum_colors="@array/demo_colors" />
+
+    <CheckBoxPreference
+        android:key="enable_demo_preference_4"
+        android:title="Enable preference below"/>
+
+    <com.doubleclick.apiretrofitmysql.spectrum.SpectrumPreferenceCompat
+        android:dependency="enable_demo_preference_4"
+        android:key="demo_preference_4"
+        android:summary="When this preference is disabled, the preview changes to gray"
+        android:title="Preference that can be disabled"
+        app:spectrum_colors="@array/demo_colors" />
+
+    <com.doubleclick.apiretrofitmysql.spectrum.SpectrumPreferenceCompat
+        android:key="demo_preference_5"
+        android:summary="Color indicator reflects external changes"
+        android:title="Color preference"
+        app:spectrum_colors="@array/demo_colors"/>
+
+</PreferenceScreen>
